@@ -55,8 +55,33 @@ sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
 
-const button = document.querySelector("contact__button button");
-const input =document.querySelector("input")
-button.addEventListener()
+function sendEmail(){
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "dhanuraja70@gmail.com",
+        Password : "Nasir@12345",
+        To : 'nh246nasir@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "New contact  form enquiry",
+        Body : "And this is the body"
+    }).then(
+      message => alert(message)
+    );
+}
+/* <div class="pdf-container">
+<i class="fa fa-file-pdf-o" style="font-size:48px;color:rgb(255, 60, 0)"></i>
+<button class="btn btn-primary mb-3" id="pdf-button">open</button> */
 
-
+const btn = document.querySelector("button");
+const flag=0;
+btn.addEventListener("click", function(){
+    if(flag==0){
+      
+        
+        flag=1;
+      }
+      else{
+        btn.href="C:\Users\nh246\Desktop\githubnew\portfolio.github.io\a", target="blank";
+        
+      }
+})
